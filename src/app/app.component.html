@@ -1,3 +1,28 @@
+<h1>Angular 10 FormData (multipart/data-form) Example</h1>
+<div>
+  <form>
+    <div>
+      <input type="file" name="profile" (change)="onFileSelect($event)" />
+    </div>
+    <div>
+      <button type="submit" (click)="onSubmit()">Upload</button>
+    </div>
+  </form>
+</div>
+
+<hr>
+<div *ngFor="let i of images" >
+  <img src="{{ 'http://localhost:3000/' + i.name }}" />
+</div>
+
+
+<!--
+
+
+
+
+
+
 <html>
   <body>
     <form ref='uploadForm' 
@@ -7,6 +32,10 @@
       encType="multipart/form-data">
         <input type="file" name="sampleFile" />
         <input type='submit' value='Upload!' />
-    </form>     
+    </form>
+    <hr>
+    <img src='http://localhost:3000/dragon.jpg'/>
   </body>
 </html>
+
+-->
