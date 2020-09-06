@@ -27,7 +27,8 @@ export class AppComponent {
 
   onSubmit() {
     const formData = new FormData();
-    formData.append('file', this.file);
+    formData.append('file', this.file, 'hola');
+    formData.append('extra', JSON.stringify({ session: 'some_session' }));
 
     this.httpClient.post<{ name: string; }>(this.SERVER_URL, formData).subscribe(
       (res) => {
